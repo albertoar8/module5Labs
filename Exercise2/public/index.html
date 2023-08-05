@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Calculator Example</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>A Server Side calculator</h1>
+    </div>
+    <div class="form">
+      <form>
+        <label for="num1">Number 1:</label><br />
+        <input type="number" id="num1" name="num1" /><br />
+        <select name="operation" id="op-select">
+          <option value="">--Please choose an option--</option>
+          <option value="add">Add</option>
+          <option value="substract">Substract</option>
+          <option value="multiply">Multiply by</option>
+          <option value="divide">Divide by</option>
+        </select>
+        <label for="num2">Number 2:</label><br />
+        <input type="text" id="num2" name="num2" />
+      </form>
+    </div>
+    <div>
+      Result
+      <span id="result"></span>
+    </div>
+  </body>
+  <script>
+    let num1 = 2;
+    let num2 = 4;
+    fetch(`/api/calc/add?num1=${num1}&num2=${num2}`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("result").innerHTML = data.result;
+      });
+  </script>
+</html>
