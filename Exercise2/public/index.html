@@ -2,24 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
     <title>Calculator Example</title>
   </head>
   <body>
-    <div class="container">
+    <div class="jumbotron text-center">
       <h1>A Server Side calculator</h1>
     </div>
-    <div class="form">
+    <div class="container text-center">
       <form>
         <label for="num1">Number 1:</label><br />
-        <input type="number" id="num1" name="num1" /><br />
-        <select name="operation" id="op-select">
+        <input type="number" id="num1" name="num1" /><br /><br />
+        <label for="num1">Operation:</label><br />
+        <select name="operation" id="op-select"> <p></p>
           <option value="">--Please choose an option--</option>
           <option value="add">Add</option>
           <option value="substract">Substract</option>
           <option value="multiply">Multiply by</option>
           <option value="divide">Divide by</option>
-        </select>
+        </select><p></p><br />
         <label for="num2">Number 2:</label><br />
         <input type="text" id="num2" name="num2" />
       </form>
